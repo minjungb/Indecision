@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js build
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js run dev-server
 
 PATH: 
   C:\Users\MBin\bin;C:\Users\MBin\AppData\Local\Programs\Git\mingw64\bin;C:\Users\MBin\AppData\Local\Programs\Git\usr\local\bin;C:\Users\MBin\AppData\Local\Programs\Git\usr\bin;C:\Users\MBin\AppData\Local\Programs\Git\usr\bin;C:\Users\MBin\AppData\Local\Programs\Git\mingw64\bin;C:\Users\MBin\AppData\Local\Programs\Git\usr\bin;C:\Users\MBin\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Program Files\nodejs;C:\Program Files (x86)\Yarn\bin;C:\Users\MBin\AppData\Local\Microsoft\WindowsApps;C:\Users\MBin\AppData\Roaming\npm;C:\Users\MBin\AppData\Local\Programs\Git\cmd;C:\Users\MBin\AppData\Local\Yarn\bin;C:\Users\MBin\AppData\Local\Programs\Git\usr\bin\vendor_perl;C:\Users\MBin\AppData\Local\Programs\Git\usr\bin\core_perl
@@ -32,10 +32,12 @@ npm manifest:
       "babel-plugin-transform-class-properties": "^6.24.1",
       "babel-preset-env": "^1.5.2",
       "babel-preset-react": "^6.24.1",
+      "css-loader": "^0.28.4",
       "live-server": "^1.2.0",
       "react": "^16.0.0",
       "react-dom": "^16.0.0",
       "react-modal": "^2.2.2",
+      "style-loader": "^0.18.2",
       "validator": "^9.4.1",
       "webpack": "^3.1.0",
       "webpack-dev-server": "^2.5.1"
@@ -667,9 +669,9 @@ Lockfile:
 
 Trace: 
   Error: Command failed.
-  Exit code: 2
+  Exit code: 1
   Command: C:\Windows\system32\cmd.exe
-  Arguments: /d /s /c webpack
+  Arguments: /d /s /c webpack-dev-server
   Directory: C:\Users\MBin\Desktop\React Apps\Indecision
   Output:
   
