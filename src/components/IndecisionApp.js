@@ -11,21 +11,25 @@ export default class IndecisionApp extends React.Component {
 		selectedOption: undefined
 	};
 
+	handleCloseModal = () => { 
+		this.setState(() => ({selectedOption: undefined}));
+	};
+
 	handleDeleteOptions = () => {
 		this.setState(() => ({options: []}));
-	}
+	};
 
 	handleDeleteOption = (optionToRemove) => {
 		this.setState((prevState)=> ({
 			options: prevState.options.filter((option)=> optionToRemove !== option)
 		}));
-	}
+	};
 
 	handlePick = () => {
 		const randomNum = Math.floor(Math.random() * this.state. options.length);
 		const option = this.state.options[randomNum];
 		this.setState(() => ({selectedOption: option}));
-	}
+	};
 
 	handleAddOption = (option) => {
 		if(!option) {
@@ -36,7 +40,7 @@ export default class IndecisionApp extends React.Component {
 		}
 
 		this.setState((prevState) => ({options: prevState.options.concat([option])}));
-	}
+	};
 
 	componentDidMount() {
 		try{
@@ -49,7 +53,7 @@ export default class IndecisionApp extends React.Component {
 		} catch(e) {
 		}
 		
-	}
+	};
 
 	componentDidUpdate(prevProps, prevState) {
 		if(prevState.options.length !== this.state.options.length) {
@@ -57,11 +61,11 @@ export default class IndecisionApp extends React.Component {
 			localStorage.setItem('options', json);
 		}
 
-	}
+	};
 
 	componentWillUnmount() {
 		console.log('componentWillUnmount');
-	}
+	};
 
 	render() {
 		const subtitle = 'Put your life in the hands of a computer';
@@ -83,11 +87,12 @@ export default class IndecisionApp extends React.Component {
 				/>
 				<OptionModal
 					selectedOption = {this.state.selectedOption}
+					handleCloseModal = {this.handleCloseModal}
 				/>
 			</div>
 		);
-	}
-}
+	};
+};
 
 IndecisionApp.defaultProps = {
 	options: []
